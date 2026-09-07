@@ -3,7 +3,7 @@
 Dự đoán kết quả trận LMHT từ đội hình pick, dựa trên dữ liệu thật của LCK/LPL/LEC
 (quét từ gol.gg, tự động cập nhật mỗi sáng qua GitHub Actions).
 
-**Xem trang tại:** https://salesbiconsi-a11y.github.io/rift-draft-predictor/
+**Xem trang tại:** https://annguyen2003-llok.github.io/rift-draft-predictor/
 
 ## Cấu trúc
 
