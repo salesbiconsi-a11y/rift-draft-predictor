@@ -8,7 +8,18 @@
    scaling   : -1 strongest early ... +1 hypercarry / late game
    mobility  : 0-3 dashes/blinks/speed
    ranged    : 1 = ranged basic attacks
-   Names follow gol.gg spelling (apostrophes stripped). */
+   Names follow gol.gg spelling (apostrophes stripped).
+
+   2026-09-07 — đối chiếu với patch note thật của 26.16 (12/08) và 26.17 (26/08),
+   2 patch đang được đá tại LCK/LPL/LEC (games.json vẫn dùng toàn bộ 469 trận đa
+   patch cho phần thống kê thắng/thua — điều đó KHÔNG đổi; chỉ lớp phân loại kit
+   ở file này mới cần cập nhật theo patch hiện tại, vì buff/nerf thay đổi sức
+   mạnh/thiên hướng thật của tướng theo thời gian):
+     26.16 buff: Azir, Gwen, Kennen · nerf: Bel'Veth, Camille, Poppy, Nasus
+     26.17 buff: Aurelion Sol, Cho'Gath, Irelia, LeBlanc, Qiyana, Trundle, Yasuo, Yone
+     26.17 nerf: Graves, Nasus, Nocturne, Thresh, Vayne (riêng đường trên), Xerath
+   Chỉ chỉnh `scaling` khi patch note nói rõ dịch chuyển SỚM/MUỘN (VD: "mất burst
+   sớm đổi lấy scale tank"); buff/nerf sức mạnh chung chung không đổi trục này. */
 
 const A = (engage, frontline, cc, dmg, scaling, mobility, ranged) =>
   ({ engage, frontline, cc, dmg, scaling, mobility, ranged });
@@ -19,7 +30,7 @@ module.exports = {
   'Sion':          A(1, 2, 3, 'Mixed', 0.7, 1, 0),
   'Galio':         A(1, 2, 3, 'AP',    0.4, 1, 0),
   'Malphite':      A(1, 2, 3, 'AP',    0.3, 1, 0),
-  'Poppy':         A(1, 2, 3, 'AD',    0.1, 1, 0),
+  'Poppy':         A(1, 2, 3, 'AD',    0.25, 1, 0),  // patch 26.16: mất burst/an toàn sớm, đổi lại sustain đường + scale tank (cùng hướng đổi với Camille)
   'Shen':          A(1, 2, 1, 'AP',    0.2, 1, 0),
   'Dr. Mundo':     A(0, 2, 1, 'AP',    0.5, 1, 0),
   'Chogath':       A(0, 2, 3, 'AP',    0.6, 0, 0),
@@ -41,20 +52,22 @@ module.exports = {
   'Renekton':      A(0, 1, 1, 'AD',   -0.6, 1, 0),
   'Olaf':          A(0, 1, 1, 'AD',   -0.4, 1, 0),
   'Jax':           A(0, 1, 1, 'AD',    0.7, 2, 0),
-  'Camille':       A(1, 1, 2, 'AD',    0.2, 3, 0),
+  'Camille':       A(1, 1, 2, 'AD',    0.2, 3, 0),   // fallback nếu xuất hiện ở đường khác top/support
+  'Camille|top':   A(1, 1, 2, 'AD',    0.35, 3, 0),  // patch 26.16: mất burst/an toàn sớm, đổi lại sustain đường + scale tank — dịch nhẹ về hậu kỳ so với trước
+  'Camille|support': A(0, 1, 1, 'AD',  0.0, 3, 0),    // build support: ít chủ động mở giao tranh hơn, thiên về bảo kê/peel cho carry, ít áp lực sát thương hơn bản top
   'Irelia':        A(1, 1, 2, 'AD',    0.2, 3, 0),
   'Trundle':       A(0, 1, 1, 'AD',    0.2, 1, 0),
   'Warwick':       A(1, 1, 2, 'Mixed', 0.0, 1, 0),
   'Kled':          A(1, 1, 2, 'AD',   -0.4, 2, 0),
   'Yorick':        A(0, 1, 1, 'AD',    0.3, 0, 0),
-  'Nasus':         A(0, 1, 1, 'AD',    0.9, 0, 0),
+  'Nasus':         A(0, 1, 1, 'AD',    0.9, 0, 0),   // bị nerf liên tiếp 26.16+26.17 (mất sustain đi đường) — đường sớm khó hơn nhưng bản chất hyperscale hậu kỳ không đổi, giữ nguyên số
   'Mordekaiser':   A(1, 1, 1, 'AP',    0.4, 1, 0),
   'Urgot':         A(0, 1, 1, 'AD',    0.1, 0, 0),
   'Gwen':          A(0, 1, 1, 'AP',    0.6, 1, 0),
   'Zaahen':        A(1, 1, 2, 'AD',    0.1, 2, 0),   // darkin skirmisher: W pull, E dash slow, revive passive
   'Sylas':         A(1, 1, 2, 'AP',    0.1, 2, 0),
-  'Yone':          A(1, 1, 2, 'Mixed', 0.4, 2, 0),
-  'Yasuo':         A(0, 1, 1, 'AD',    0.5, 2, 0),
+  'Yone':          A(1, 1, 2, 'Mixed', 0.5, 2, 0),   // patch 26.17: buff khuyến khích lên đồ chí mạng — củng cố thiên hướng hậu kỳ
+  'Yasuo':         A(0, 1, 1, 'AD',    0.6, 2, 0),   // patch 26.17: buff khuyến khích lên đồ chí mạng — củng cố thiên hướng hậu kỳ
   'Gragas':        A(1, 1, 2, 'AP',    0.2, 1, 0),
   'Rumble':        A(0, 1, 1, 'AP',    0.0, 1, 0),
   'Gnar':          A(1, 1, 3, 'Mixed', 0.3, 2, 1),
@@ -79,12 +92,12 @@ module.exports = {
   // ---------- assassins / mid ----------
   'Akali':         A(0, 0, 1, 'AP',    0.0, 3, 0),
   'Locke':         A(0, 0, 2, 'AP',    0.0, 3, 0),   // AP assassin: Q slows, E blink+dash, R 99% slow + execute
-  'LeBlanc':       A(0, 0, 1, 'AP',   -0.2, 2, 1),
+  'LeBlanc':       A(0, 0, 1, 'AP',   -0.1, 2, 1),   // patch 26.17: buff tốc đánh + tỉ lệ AP — bớt lệ thuộc vào combo giết sớm, dịch nhẹ về hậu kỳ
   'Ahri':          A(0, 0, 2, 'AP',    0.2, 2, 1),
   'Aurora':        A(0, 0, 2, 'AP',    0.2, 2, 1),
   'Pyke':          A(1, 0, 2, 'AD',    0.0, 2, 0),
   'Tristana':      A(1, 0, 1, 'AD',    0.3, 2, 1),
-  'Vayne':         A(0, 0, 1, 'AD',    0.9, 1, 1),
+  'Vayne':         A(0, 0, 1, 'AD',    0.9, 1, 1),   // trong dữ liệu chỉ xuất hiện ở top; patch 26.17 nerf diện rộng riêng Vayne top (giảm sức mạnh chung, không đổi hướng hậu kỳ)
 
   // ---------- control mages ----------
   'Ryze':          A(0, 0, 1, 'AP',    0.8, 1, 1),
@@ -146,7 +159,7 @@ module.exports = {
   'Zoe':           A(0, 0, 2, 'AP',    0.3, 1, 1),
   'Volibear':      A(1, 2, 2, 'Mixed', 0.3, 1, 0),
   'Shyvana':       A(1, 1, 1, 'Mixed', 0.4, 2, 0),
-  'Kennen':        A(1, 0, 3, 'AP',    0.3, 2, 1),
+  'Kennen':        A(1, 0, 3, 'AP',    0.4, 2, 1),   // patch 26.16: ult cộng thêm sát thương lẫn kháng chịu — trụ giao tranh tốt hơn, dịch nhẹ về hậu kỳ
   'KhaZix':        A(0, 0, 0, 'AD',    0.1, 3, 0),
   'Zyra':          A(1, 0, 2, 'AP',    0.4, 0, 1),
   'Tahm Kench':    A(1, 2, 2, 'AP',    0.2, 1, 0),
