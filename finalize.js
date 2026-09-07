@@ -33,32 +33,28 @@ if (droppedGames.length) {
     droppedGames.map(g => `#${g.gameId} (${g.blue.team} vs ${g.red.team}, ${g.date})`).join(', '));
 }
 
-/* Chỉ phân tích PATCH_WINDOW patch gần nhất — MỖI GIẢI RIÊNG, không dùng chung
-   1 số patch. Lý do: 3 giải patch lệch nhau theo lịch bảo trì riêng (xác nhận
-   2026-09-07: LCK vẫn patch 16.16 trong khi LPL/LEC đã lên 16.17 cùng thời điểm)
-   — lấy "patch mới nhất" theo một con số chung sẽ xoá sạch dữ liệu mới nhất của
-   giải nào đã patch trước. Nên với mỗi giải, giữ đúng PATCH_WINDOW patch cao
-   nhất của RIÊNG giải đó; tự đúng khi sang patch mới, không cần sửa tay.
-   Số 2 (thay vì 1) là đánh đổi đã đo: chỉ giữ patch cao nhất (2026-09-07) cho
-   134 trận, AUC tụt xuống 0.53-0.54 và mô hình kill âm hẳn (R2=-0.16) — mẫu quá
-   nhỏ để tin được, còn không lọc gì cả (469 trận, nhiều patch cũ hơn) lại đo ra
-   AUC tốt hơn (0.59-0.65) dù có nguy cơ lẫn balance đã lỗi thời. Giữ 2 patch gần
-   nhất là điểm giữa: gần patch hiện tại hơn hẳn so với không lọc, nhưng đủ mẫu
-   hơn hẳn so với chỉ 1 patch. So sánh patch theo cặp số (major.minor), không so
-   chuỗi — "16.9" phải nhỏ hơn "16.10". */
-const PATCH_WINDOW = 2;
+/* KHÔNG lọc theo patch — đã thử và đo lại bằng thực nghiệm (2026-09-07), quyết
+   định giữ nguyên toàn bộ dữ liệu. Diễn biến: 3 giải patch lệch nhau theo lịch
+   bảo trì riêng (LCK 16.16, LPL/LEC 16.17 cùng thời điểm), nên thử lọc "chỉ patch
+   hiện tại của từng giải" (1 rồi 2 patch gần nhất) để tránh lẫn balance cũ.
+   Nhưng so sánh 1 lần duy nhất mỗi cách (seed cố định) từng cho kết quả GÂY HIỂU
+   LẦM: "2 patch" (261 trận) có vẻ thắng AUC chỉ-đội-hình (0.624 vs 0.590 không
+   lọc). Đo lại đúng cách — lặp 10 seed ngẫu nhiên khác nhau, lấy trung bình —
+   lộ ra đó chỉ là may mắn trúng 1 seed tốt (0.624 chính là max trong khoảng
+   0.506-0.625 dao động của "2 patch"). Trung bình thật: không lọc AUC=0.575
+   (lệch chuẩn 0.009, rất ổn định) > 2 patch AUC=0.556 (lệch 0.031) > 1 patch
+   AUC=0.514 (lệch 0.037, n=134 quá nhỏ). Không lọc thắng cả 2 tiêu chí — cao
+   hơn VÀ ổn định hơn hẳn — nên không có lý do để chấp nhận mẫu nhỏ hơn đổi lấy
+   "gần patch hiện tại hơn". Patch nào cũng được coi bình đẳng, chỉ hiển thị
+   danh sách patch mỗi giải trong meta để tham khảo, không loại trừ trận nào. */
 function patchKey(p) { const [a, b] = String(p).split('.').map(Number); return a * 1000 + (b || 0); }
 const patchesByLeague = {};
 for (const g of games) (patchesByLeague[g.league] = patchesByLeague[g.league] || new Set()).add(g.patch);
-const keptPatchesByLeague = {};
+const allPatchesByLeague = {};
 for (const [league, set] of Object.entries(patchesByLeague)) {
-  keptPatchesByLeague[league] = [...set].sort((a, b) => patchKey(b) - patchKey(a)).slice(0, PATCH_WINDOW);
+  allPatchesByLeague[league] = [...set].sort((a, b) => patchKey(b) - patchKey(a));
 }
-const isKept = g => keptPatchesByLeague[g.league] && keptPatchesByLeague[g.league].includes(g.patch);
-const oldPatchGames = games.filter(g => !isKept(g));
-games = games.filter(isKept);
-console.log(`Giữ ${PATCH_WINDOW} patch gần nhất mỗi giải: ${Object.entries(keptPatchesByLeague).map(([l, ps]) => `${l}=[${ps.join(',')}]`).join(', ')}`);
-console.log(`Loại ${oldPatchGames.length} trận patch cũ hơn khỏi huấn luyện (còn lại ${games.length} trận).`);
+console.log(`Patch theo từng giải (không lọc gì, chỉ để hiển thị): ${Object.entries(allPatchesByLeague).map(([l, ps]) => `${l}=[${ps.join(',')}]`).join(', ')}`);
 
 /* Trần mẫu số: giữ CAP trận gần nhất, bỏ trận xa nhất nếu vượt.
    Không xoá cache/games.json — chỉ lọc lúc huấn luyện, để đổi CAP sau
@@ -392,7 +388,7 @@ const out = {
     priors: { championWinRateK: PRIOR_K, matchupK: MATCHUP_K, teamK: TEAM_K },
     gameCap: { limit: GAME_CAP, excludedAsStale: staleGames.length,
       totalScanned: rawGames.length, oldestKept: games.length ? games[0].date : null },
-    currentPatchOnly: { window: PATCH_WINDOW, byLeague: keptPatchesByLeague, excludedOldPatch: oldPatchGames.length },
+    patchesByLeague: allPatchesByLeague,
     integrity: {
       picksMatchScoreboard: rawGames.filter(g => g.integrity.picksMatchScoreboard).length,
       picksMatchScoreboardOf: rawGames.length,

@@ -801,21 +801,15 @@ function openInfo(){
     cần API/AI vì quét dữ liệu là code thuần. Xem log các lần chạy ở tab "Actions" của repo trên
     GitHub.</p>
 
-    <p><b>Chỉ phân tích ${m.currentPatchOnly.window} patch gần nhất — của riêng từng giải.</b> ${(() => {
-      const byL = m.currentPatchOnly.byLeague;
-      return Object.entries(byL).map(([l, ps]) => `${l} giữ patch <b>${ps.map(patchLabel).join(", ")}</b>`).join("; ");
-    })()}. 3 giải patch lệch nhau theo lịch bảo trì riêng — không dùng chung một số patch,
-    vì lấy "patch mới nhất" theo một con số chung sẽ xoá mất dữ liệu mới nhất của giải nào lỡ
-    patch trước. Đã loại <b>${m.currentPatchOnly.excludedOldPatch}</b> trận patch cũ hơn khỏi
-    huấn luyện (vẫn còn nguyên trong <code>data/games.json</code> để tra cứu lịch sử).
-    Cách này tự đúng khi giải nào đó sang patch mới — không cần sửa tay.
-    <b style="color:var(--orange)">Vì sao 2 patch, không phải 1 hay tất cả:</b> đã đo cả 3 mức trên
-    cùng dữ liệu — chỉ 1 patch mới nhất (134 trận): AUC 0.54 chỉ đội hình / 0.53 +đội, mô hình kill
-    âm hẳn (R² = -0.16, mẫu quá nhỏ để tin). Không lọc gì (469 trận, gộp 5 patch từ 22/07): AUC 0.59 / 0.65.
-    2 patch gần nhất (261 trận, đang dùng): AUC <b>${DATA.models.draft.metrics.cvAuc.toFixed(2)}</b> chỉ đội hình /
-    <b>${DATA.models.withTeam.metrics.cvAuc.toFixed(2)}</b> +đội — cao nhất ở phần chỉ-đội-hình trong cả 3 mức đo,
-    và mô hình kill trở lại dương nhẹ. Không có gì đảm bảo con số này giữ nguyên khi dữ liệu đổi mỗi ngày —
-    xem phần "Mô hình này đáng tin tới đâu" bên dưới để thấy số đo mới nhất.</p>
+    <p><b>Không lọc theo patch — đã thử và đo lại, quyết định bỏ.</b> 3 giải patch lệch nhau theo
+    lịch bảo trì riêng (${Object.entries(m.patchesByLeague).map(([l, ps]) => `${l} đang ${ps.map(patchLabel).join("/")}`).join(", ")}),
+    nên từng thử chỉ giữ 1-2 patch gần nhất của mỗi giải để tránh lẫn balance cũ. Đo 1 lần với seed
+    cố định từng cho kết quả gây hiểu lầm: "2 patch" (261 trận) có vẻ thắng AUC (0.624 vs 0.590
+    không lọc). Đo lại đúng cách — lặp 10 seed ngẫu nhiên, lấy trung bình — lộ ra đó chỉ là may mắn
+    trúng 1 seed tốt. Trung bình thật: <b>không lọc AUC=0.575 (lệch chuẩn 0.009, rất ổn định)</b>
+    > 2 patch AUC=0.556 (lệch 0.031) > 1 patch AUC=0.514 (lệch 0.037, mẫu quá nhỏ). Không lọc thắng
+    cả 2 tiêu chí — cao hơn và ổn định hơn hẳn — nên giữ nguyên toàn bộ dữ liệu, không loại patch nào.
+    Bài học giữ lại: đừng tin một phép đo AUC đơn lẻ trên mẫu nhỏ, kể cả khi con số nhìn thuyết phục.</p>
 
     <p><b>Bốn lớp kiểm chứng.</b> ① Danh sách pick trong phần draft phải trùng khớp bảng điểm 5 người:
     ${i.picksMatchScoreboard}/${i.picksMatchScoreboardOf} trận khớp
@@ -1292,7 +1286,7 @@ function exportUpdatedFile(){
   document.getElementById("badges").innerHTML = `
     <span class="badge"><span class="dot"></span> Quét gần nhất <b>${m.builtAt || m.dateTo}</b></span>
     <span class="badge"><b>${m.games}</b> trận · ${m.dateFrom} → ${m.dateTo}</span>
-    <span class="badge">${m.currentPatchOnly.window} patch gần nhất: <b>${Object.entries(m.currentPatchOnly.byLeague)
+    <span class="badge">Patch: <b>${Object.entries(m.patchesByLeague)
       .map(([l, ps]) => `${l} ${ps.map(patchLabel).join("/")}`).join(" · ")}</b></span>
     <span class="badge">Side xanh <b>${pct1(bl.blueWinRate)}</b></span>
     <span class="badge">AUC <b>${DATA.models.draft.metrics.cvAuc.toFixed(3)}</b> · +đội <b>${DATA.models.withTeam.metrics.cvAuc.toFixed(3)}</b></span>
