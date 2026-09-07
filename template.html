@@ -753,7 +753,10 @@ function analyze(){
 
     <div class="scroll-x" style="margin-top:16px">
       <table class="data">
-        <caption>Kiểm định từng tín hiệu (AUC đo leak-free) — cơ sở để quyết định yếu tố nào được vào mô hình</caption>
+        <caption>Kiểm định từng tín hiệu (AUC đo leak-free) — cơ sở để quyết định yếu tố nào được vào mô hình.
+          <span class="thin">Đo trên tập dữ liệu nhiều patch gộp lại (293-425 trận) lúc chọn kiến trúc mô hình,
+          không phải trên ${DATA.meta.games} trận patch hiện tại đang hiển thị — mẫu hiện tại quá nhỏ để đo lại đáng tin cậy.
+          Các chỉ số CV bên dưới (AUC, độ chính xác) mới là số đo trực tiếp trên dữ liệu hiện tại.</span></caption>
         <thead><tr><th>Tín hiệu</th><th class="num">AUC</th><th>Vào mô hình?</th><th>Ghi chú</th></tr></thead>
         <tbody>${DATA.meta.signalAudit.map(s => `<tr>
           <td>${FEAT_LABEL[s.feature] || s.feature}</td>
@@ -789,7 +792,7 @@ function openInfo(){
   const m = DATA.meta, i = m.integrity;
   document.getElementById("infoBody").innerHTML = `
     <p><b>Nguồn.</b> ${m.games} trận đấu chuyên nghiệp từ ${m.dateFrom} đến ${m.dateTo}, gồm
-    ${m.tournaments.join(", ")}. Patch ${m.patches.map(patchLabel).join(", ")}.
+    ${m.tournaments.join(", ")}.
     Dữ liệu lấy từ gol.gg: trang thống kê tổng hợp của họ nạp bằng JavaScript nên không đọc được,
     nhưng trang từng trận là HTML tĩnh — nên tôi tải trực tiếp ${m.games} trang đó về và tự bóc tách,
     thay vì nhờ một model đọc hộ (cách đó từng cho ra số liệu sai lệch khi thử).
@@ -797,6 +800,18 @@ function openInfo(){
     mỗi sáng, chạy trên máy chủ của GitHub — không phụ thuộc máy tính nào bật hay tắt, và không
     cần API/AI vì quét dữ liệu là code thuần. Xem log các lần chạy ở tab "Actions" của repo trên
     GitHub.</p>
+
+    <p><b>Chỉ phân tích patch hiện tại — của riêng từng giải.</b> ${(() => {
+      const byL = m.currentPatchOnly.byLeague;
+      return Object.entries(byL).map(([l, p]) => `${l} đang patch <b>${patchLabel(p)}</b>`).join(", ");
+    })()}. 3 giải patch lệch nhau theo lịch bảo trì riêng — không dùng chung một số patch,
+    vì lấy "patch mới nhất" theo một con số chung sẽ xoá mất dữ liệu mới nhất của giải nào lỡ
+    patch trước. Đã loại <b>${m.currentPatchOnly.excludedOldPatch}</b> trận patch cũ hơn khỏi
+    huấn luyện (vẫn còn nguyên trong <code>data/games.json</code> để tra cứu lịch sử).
+    Cách này tự đúng khi giải nào đó sang patch mới — không cần sửa tay.
+    <b style="color:var(--orange)">Đánh đổi:</b> mẫu nhỏ hơn hẳn (còn ${m.games} trận) nên các
+    con số đo được (AUC, sai số) kém ổn định hơn so với gộp nhiều patch — xem phần
+    "Mô hình này đáng tin tới đâu" bên dưới.</p>
 
     <p><b>Bốn lớp kiểm chứng.</b> ① Danh sách pick trong phần draft phải trùng khớp bảng điểm 5 người:
     ${i.picksMatchScoreboard}/${i.picksMatchScoreboardOf} trận khớp
@@ -1273,8 +1288,8 @@ function exportUpdatedFile(){
   document.getElementById("badges").innerHTML = `
     <span class="badge"><span class="dot"></span> Quét gần nhất <b>${m.builtAt || m.dateTo}</b></span>
     <span class="badge"><b>${m.games}</b> trận · ${m.dateFrom} → ${m.dateTo}</span>
-    <span class="badge">Patch <b>${m.patches.map(patchLabel).join(" · ")}</b></span>
-    <span class="badge">${m.leagues.join(" · ")}</span>
+    <span class="badge">Patch hiện tại: <b>${Object.entries(m.currentPatchOnly.byLeague)
+      .map(([l, p]) => `${l} ${patchLabel(p)}`).join(" · ")}</b></span>
     <span class="badge">Side xanh <b>${pct1(bl.blueWinRate)}</b></span>
     <span class="badge">AUC <b>${DATA.models.draft.metrics.cvAuc.toFixed(3)}</b> · +đội <b>${DATA.models.withTeam.metrics.cvAuc.toFixed(3)}</b></span>
     ${DATA.patchUpdate ? `<span class="badge" style="border-color:rgba(232,161,92,.45)">

@@ -33,6 +33,24 @@ if (droppedGames.length) {
     droppedGames.map(g => `#${g.gameId} (${g.blue.team} vs ${g.red.team}, ${g.date})`).join(', '));
 }
 
+/* Chỉ phân tích patch hiện tại — MỖI GIẢI RIÊNG, không dùng chung 1 số patch.
+   Lý do: 3 giải patch lệch nhau theo lịch bảo trì riêng (xác nhận 2026-09-07:
+   LCK vẫn patch 16.16 trong khi LPL/LEC đã lên 16.17 cùng thời điểm) — lấy
+   "patch mới nhất" theo một con số chung sẽ xoá sạch dữ liệu mới nhất của giải
+   nào đã patch trước. Nên với mỗi giải, giữ đúng patch cao nhất của RIÊNG giải
+   đó; tự đúng khi sang patch mới, không cần sửa tay. So sánh patch theo cặp
+   số (major.minor), không so chuỗi — "16.9" phải nhỏ hơn "16.10". */
+function patchKey(p) { const [a, b] = String(p).split('.').map(Number); return a * 1000 + (b || 0); }
+const maxPatchByLeague = {};
+for (const g of games) {
+  const cur = maxPatchByLeague[g.league];
+  if (!cur || patchKey(g.patch) > patchKey(cur)) maxPatchByLeague[g.league] = g.patch;
+}
+const oldPatchGames = games.filter(g => g.patch !== maxPatchByLeague[g.league]);
+games = games.filter(g => g.patch === maxPatchByLeague[g.league]);
+console.log(`Patch hiện tại theo từng giải: ${Object.entries(maxPatchByLeague).map(([l, p]) => `${l}=${p}`).join(', ')}`);
+console.log(`Loại ${oldPatchGames.length} trận patch cũ hơn khỏi huấn luyện (còn lại ${games.length} trận patch hiện tại).`);
+
 /* Trần mẫu số: giữ CAP trận gần nhất, bỏ trận xa nhất nếu vượt.
    Không xoá cache/games.json — chỉ lọc lúc huấn luyện, để đổi CAP sau
    này không cần tải lại. Số 600 ước từ tốc độ ~53 trận/tuần hiện tại,
@@ -365,6 +383,7 @@ const out = {
     priors: { championWinRateK: PRIOR_K, matchupK: MATCHUP_K, teamK: TEAM_K },
     gameCap: { limit: GAME_CAP, excludedAsStale: staleGames.length,
       totalScanned: rawGames.length, oldestKept: games.length ? games[0].date : null },
+    currentPatchOnly: { byLeague: maxPatchByLeague, excludedOldPatch: oldPatchGames.length },
     integrity: {
       picksMatchScoreboard: rawGames.filter(g => g.integrity.picksMatchScoreboard).length,
       picksMatchScoreboardOf: rawGames.length,
