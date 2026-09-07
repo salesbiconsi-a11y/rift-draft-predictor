@@ -1,10 +1,10 @@
-name: Quét gol.gg mỗi sáng
+name: Daily gol.gg scan
 
 on:
   schedule:
-    # 01:00 UTC = 08:00 giờ Việt Nam (ICT, UTC+7)
+    # 01:00 UTC = 08:00 Vietnam time (ICT, UTC+7)
     - cron: '0 1 * * *'
-  workflow_dispatch: {}   # cho phép bấm "Run workflow" để chạy tay khi cần
+  workflow_dispatch: {}
 
 permissions:
   contents: write
@@ -21,29 +21,29 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
-      - name: Cài Node.js
+      - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
           node-version: '22'
 
-      - name: Cache trang HTML đã tải (tăng tốc, không bắt buộc)
+      - name: Cache fetched HTML pages
         uses: actions/cache@v4
         with:
           path: cache
           key: golgg-cache-${{ github.run_id }}
           restore-keys: golgg-cache-
 
-      - name: Quét + huấn luyện lại + dựng trang
+      - name: Scan, retrain, rebuild page
         run: node run-update.js 8
 
-      - name: Commit dữ liệu mới (nếu có)
+      - name: Commit new data (if any)
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
           git add index.html data/games.json data/series.json data/dataset.json
           if git diff --cached --quiet; then
-            echo "Không có trận mới, không commit."
+            echo "No new games, nothing to commit."
           else
-            git commit -m "Tự động cập nhật dữ liệu $(date -u +%Y-%m-%d)"
+            git commit -m "Auto data update $(date -u +%Y-%m-%d)"
             git push
           fi
