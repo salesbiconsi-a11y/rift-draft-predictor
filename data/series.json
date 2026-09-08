@@ -2122,5 +2122,17 @@
   "week": "ROUND3",
   "patch": "16.17",
   "date": "2026-09-06"
+ },
+ {
+  "league": "LPL",
+  "tournament": "LPL 2026 Grand Finals",
+  "seriesId": 82725,
+  "matchup": "AL vs BLG",
+  "teamRight": "Anyone s Legend",
+  "teamLeft": "Bilibili Gaming",
+  "games": 3,
+  "week": "ROUND4",
+  "patch": "16.17",
+  "date": "2026-09-07"
  }
 ]

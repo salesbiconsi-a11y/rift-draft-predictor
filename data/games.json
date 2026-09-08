@@ -70969,5 +70969,458 @@
    "killTotalsMatch": true,
    "teams": "Karmine Corp|G2 Esports"
   }
+ },
+ {
+  "ok": true,
+  "gameId": 82725,
+  "duration": "31:05",
+  "durationMin": 31.08,
+  "patch": "16.17",
+  "blue": {
+   "team": "Anyone s Legend",
+   "teamFull": "Anyone s Legend",
+   "win": false,
+   "kills": 0,
+   "towers": 2,
+   "dragons": 2,
+   "barons": 0,
+   "gold": 50400,
+   "bans": [
+    "Cassiopeia",
+    "Vi",
+    "Orianna",
+    "Gnar",
+    "Naafiri"
+   ],
+   "picksDraftOrder": [
+    "Ezreal",
+    "Karma",
+    "Pantheon",
+    "Syndra",
+    "Galio"
+   ],
+   "comp": {
+    "top": {
+     "champion": "Galio",
+     "playerId": "2348",
+     "player": "Breathe",
+     "k": 0,
+     "d": 3,
+     "a": 0
+    },
+    "jungle": {
+     "champion": "Pantheon",
+     "playerId": "1226",
+     "player": "Tarzan",
+     "k": 0,
+     "d": 6,
+     "a": 0
+    },
+    "mid": {
+     "champion": "Syndra",
+     "playerId": "3344",
+     "player": "Shanks",
+     "k": 0,
+     "d": 5,
+     "a": 0
+    },
+    "adc": {
+     "champion": "Ezreal",
+     "playerId": "1561",
+     "player": "Hope",
+     "k": 0,
+     "d": 3,
+     "a": 0
+    },
+    "support": {
+     "champion": "Karma",
+     "playerId": "3323",
+     "player": "Kael",
+     "k": 0,
+     "d": 3,
+     "a": 0
+    }
+   }
+  },
+  "red": {
+   "team": "Bilibili Gaming",
+   "teamFull": "Bilibili Gaming",
+   "win": true,
+   "kills": 20,
+   "towers": 11,
+   "dragons": 3,
+   "barons": 2,
+   "gold": 68300,
+   "bans": [
+    "Olaf",
+    "Jarvan IV",
+    "Nocturne",
+    "KSante",
+    "Annie"
+   ],
+   "picksDraftOrder": [
+    "Ryze",
+    "Ashe",
+    "Seraphine",
+    "Rumble",
+    "Qiyana"
+   ],
+   "comp": {
+    "top": {
+     "champion": "Rumble",
+     "playerId": "2606",
+     "player": "Bin",
+     "k": 3,
+     "d": 0,
+     "a": 8
+    },
+    "jungle": {
+     "champion": "Qiyana",
+     "playerId": "3330",
+     "player": "XUN",
+     "k": 7,
+     "d": 0,
+     "a": 7
+    },
+    "mid": {
+     "champion": "Ryze",
+     "playerId": "1270",
+     "player": "Knight",
+     "k": 6,
+     "d": 0,
+     "a": 9
+    },
+    "adc": {
+     "champion": "Ashe",
+     "playerId": "1228",
+     "player": "Viper",
+     "k": 4,
+     "d": 0,
+     "a": 11
+    },
+    "support": {
+     "champion": "Seraphine",
+     "playerId": "3353",
+     "player": "ON",
+     "k": 0,
+     "d": 0,
+     "a": 15
+    }
+   }
+  },
+  "warnings": [],
+  "league": "LPL",
+  "tournament": "LPL 2026 Grand Finals",
+  "date": "2026-09-07",
+  "week": "ROUND4",
+  "seriesId": 82725,
+  "gameInSeries": 1,
+  "integrity": {
+   "picksMatchScoreboard": true,
+   "killTotalsMatch": true,
+   "teams": "Anyone s Legend|Bilibili Gaming"
+  }
+ },
+ {
+  "ok": true,
+  "gameId": 82726,
+  "duration": "33:00",
+  "durationMin": 33,
+  "patch": "16.17",
+  "blue": {
+   "team": "Anyone s Legend",
+   "teamFull": "Anyone s Legend",
+   "win": false,
+   "kills": 6,
+   "towers": 2,
+   "dragons": 3,
+   "barons": 0,
+   "gold": 57300,
+   "bans": [
+    "Cassiopeia",
+    "Vi",
+    "Xayah",
+    "Lee Sin",
+    "Gnar"
+   ],
+   "picksDraftOrder": [
+    "Lucian",
+    "Milio",
+    "Akali",
+    "KSante",
+    "Naafiri"
+   ],
+   "comp": {
+    "top": {
+     "champion": "KSante",
+     "playerId": "2348",
+     "player": "Breathe",
+     "k": 0,
+     "d": 3,
+     "a": 4
+    },
+    "jungle": {
+     "champion": "Naafiri",
+     "playerId": "1226",
+     "player": "Tarzan",
+     "k": 1,
+     "d": 3,
+     "a": 4
+    },
+    "mid": {
+     "champion": "Akali",
+     "playerId": "3344",
+     "player": "Shanks",
+     "k": 4,
+     "d": 2,
+     "a": 1
+    },
+    "adc": {
+     "champion": "Lucian",
+     "playerId": "1561",
+     "player": "Hope",
+     "k": 1,
+     "d": 4,
+     "a": 1
+    },
+    "support": {
+     "champion": "Milio",
+     "playerId": "3323",
+     "player": "Kael",
+     "k": 0,
+     "d": 1,
+     "a": 4
+    }
+   }
+  },
+  "red": {
+   "team": "Bilibili Gaming",
+   "teamFull": "Bilibili Gaming",
+   "win": true,
+   "kills": 13,
+   "towers": 10,
+   "dragons": 2,
+   "barons": 2,
+   "gold": 68500,
+   "bans": [
+    "Olaf",
+    "Nocturne",
+    "Poppy",
+    "Maokai",
+    "Jarvan IV"
+   ],
+   "picksDraftOrder": [
+    "Orianna",
+    "Yunara",
+    "Lulu",
+    "Camille",
+    "Trundle"
+   ],
+   "comp": {
+    "top": {
+     "champion": "Camille",
+     "playerId": "2606",
+     "player": "Bin",
+     "k": 5,
+     "d": 0,
+     "a": 3
+    },
+    "jungle": {
+     "champion": "Trundle",
+     "playerId": "3330",
+     "player": "XUN",
+     "k": 2,
+     "d": 1,
+     "a": 7
+    },
+    "mid": {
+     "champion": "Orianna",
+     "playerId": "1270",
+     "player": "Knight",
+     "k": 2,
+     "d": 2,
+     "a": 7
+    },
+    "adc": {
+     "champion": "Yunara",
+     "playerId": "1228",
+     "player": "Viper",
+     "k": 4,
+     "d": 3,
+     "a": 7
+    },
+    "support": {
+     "champion": "Lulu",
+     "playerId": "3353",
+     "player": "ON",
+     "k": 0,
+     "d": 0,
+     "a": 12
+    }
+   }
+  },
+  "warnings": [],
+  "league": "LPL",
+  "tournament": "LPL 2026 Grand Finals",
+  "date": "2026-09-07",
+  "week": "ROUND4",
+  "seriesId": 82725,
+  "gameInSeries": 2,
+  "integrity": {
+   "picksMatchScoreboard": true,
+   "killTotalsMatch": true,
+   "teams": "Anyone s Legend|Bilibili Gaming"
+  }
+ },
+ {
+  "ok": true,
+  "gameId": 82727,
+  "duration": "24:55",
+  "durationMin": 24.92,
+  "patch": "16.17",
+  "blue": {
+   "team": "Bilibili Gaming",
+   "teamFull": "Bilibili Gaming",
+   "win": true,
+   "kills": 23,
+   "towers": 8,
+   "dragons": 2,
+   "barons": 1,
+   "gold": 55800,
+   "bans": [
+    "Cassiopeia",
+    "Nocturne",
+    "Caitlyn",
+    "Jax",
+    "Yone"
+   ],
+   "picksDraftOrder": [
+    "Kalista",
+    "Renata Glasc",
+    "Olaf",
+    "Skarner",
+    "Locke"
+   ],
+   "comp": {
+    "top": {
+     "champion": "Olaf",
+     "playerId": "2606",
+     "player": "Bin",
+     "k": 3,
+     "d": 3,
+     "a": 8
+    },
+    "jungle": {
+     "champion": "Skarner",
+     "playerId": "3330",
+     "player": "XUN",
+     "k": 1,
+     "d": 1,
+     "a": 18
+    },
+    "mid": {
+     "champion": "Locke",
+     "playerId": "1270",
+     "player": "Knight",
+     "k": 8,
+     "d": 1,
+     "a": 6
+    },
+    "adc": {
+     "champion": "Kalista",
+     "playerId": "1228",
+     "player": "Viper",
+     "k": 11,
+     "d": 2,
+     "a": 9
+    },
+    "support": {
+     "champion": "Renata Glasc",
+     "playerId": "3353",
+     "player": "ON",
+     "k": 0,
+     "d": 1,
+     "a": 20
+    }
+   }
+  },
+  "red": {
+   "team": "Anyone s Legend",
+   "teamFull": "Anyone s Legend",
+   "win": false,
+   "kills": 8,
+   "towers": 1,
+   "dragons": 1,
+   "barons": 0,
+   "gold": 43600,
+   "bans": [
+    "Jarvan IV",
+    "Gnar",
+    "Vi",
+    "Sylas",
+    "Lee Sin"
+   ],
+   "picksDraftOrder": [
+    "Maokai",
+    "Corki",
+    "Neeko",
+    "Anivia",
+    "Nasus"
+   ],
+   "comp": {
+    "top": {
+     "champion": "Nasus",
+     "playerId": "2348",
+     "player": "Breathe",
+     "k": 2,
+     "d": 3,
+     "a": 0
+    },
+    "jungle": {
+     "champion": "Maokai",
+     "playerId": "1226",
+     "player": "Tarzan",
+     "k": 3,
+     "d": 4,
+     "a": 2
+    },
+    "mid": {
+     "champion": "Anivia",
+     "playerId": "3344",
+     "player": "Shanks",
+     "k": 2,
+     "d": 5,
+     "a": 2
+    },
+    "adc": {
+     "champion": "Corki",
+     "playerId": "1561",
+     "player": "Hope",
+     "k": 1,
+     "d": 6,
+     "a": 5
+    },
+    "support": {
+     "champion": "Neeko",
+     "playerId": "3323",
+     "player": "Kael",
+     "k": 0,
+     "d": 5,
+     "a": 6
+    }
+   }
+  },
+  "warnings": [],
+  "league": "LPL",
+  "tournament": "LPL 2026 Grand Finals",
+  "date": "2026-09-07",
+  "week": "ROUND4",
+  "seriesId": 82725,
+  "gameInSeries": 3,
+  "integrity": {
+   "picksMatchScoreboard": true,
+   "killTotalsMatch": true,
+   "teams": "Bilibili Gaming|Anyone s Legend"
+  }
  }
 ]
