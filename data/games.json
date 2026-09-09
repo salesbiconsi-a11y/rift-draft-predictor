@@ -71422,5 +71422,458 @@
    "killTotalsMatch": true,
    "teams": "Bilibili Gaming|Anyone s Legend"
   }
+ },
+ {
+  "ok": true,
+  "gameId": 82793,
+  "duration": "26:58",
+  "durationMin": 26.97,
+  "patch": "16.17",
+  "blue": {
+   "team": "LGD Gaming",
+   "teamFull": "LGD Gaming",
+   "win": false,
+   "kills": 4,
+   "towers": 1,
+   "dragons": 0,
+   "barons": 0,
+   "gold": 43800,
+   "bans": [
+    "Jarvan IV",
+    "Vi",
+    "Caitlyn",
+    "Orianna",
+    "Renekton"
+   ],
+   "picksDraftOrder": [
+    "Karma",
+    "Ezreal",
+    "Ryze",
+    "Pantheon",
+    "Ambessa"
+   ],
+   "comp": {
+    "top": {
+     "champion": "Ambessa",
+     "playerId": "4119",
+     "player": "Burdol",
+     "k": 2,
+     "d": 4,
+     "a": 0
+    },
+    "jungle": {
+     "champion": "Pantheon",
+     "playerId": "3350",
+     "player": "Heng",
+     "k": 1,
+     "d": 4,
+     "a": 2
+    },
+    "mid": {
+     "champion": "Ryze",
+     "playerId": "4919",
+     "player": "Tangyuan",
+     "k": 1,
+     "d": 3,
+     "a": 1
+    },
+    "adc": {
+     "champion": "Ezreal",
+     "playerId": "5368",
+     "player": "Shaoye",
+     "k": 0,
+     "d": 3,
+     "a": 2
+    },
+    "support": {
+     "champion": "Karma",
+     "playerId": "1169",
+     "player": "Crisp",
+     "k": 0,
+     "d": 6,
+     "a": 3
+    }
+   }
+  },
+  "red": {
+   "team": "Invictus Gaming",
+   "teamFull": "Invictus Gaming",
+   "win": true,
+   "kills": 20,
+   "towers": 10,
+   "dragons": 4,
+   "barons": 1,
+   "gold": 59700,
+   "bans": [
+    "Cassiopeia",
+    "Nocturne",
+    "Olaf",
+    "Lee Sin",
+    "Qiyana"
+   ],
+   "picksDraftOrder": [
+    "Ashe",
+    "Seraphine",
+    "Naafiri",
+    "Syndra",
+    "Gnar"
+   ],
+   "comp": {
+    "top": {
+     "champion": "Gnar",
+     "playerId": "1075",
+     "player": "TheShy",
+     "k": 2,
+     "d": 2,
+     "a": 5
+    },
+    "jungle": {
+     "champion": "Naafiri",
+     "playerId": "388",
+     "player": "Wei",
+     "k": 7,
+     "d": 1,
+     "a": 8
+    },
+    "mid": {
+     "champion": "Syndra",
+     "playerId": "109",
+     "player": "RooKie",
+     "k": 6,
+     "d": 0,
+     "a": 6
+    },
+    "adc": {
+     "champion": "Ashe",
+     "playerId": "5939",
+     "player": "JiaQi",
+     "k": 5,
+     "d": 0,
+     "a": 10
+    },
+    "support": {
+     "champion": "Seraphine",
+     "playerId": "386",
+     "player": "meiko",
+     "k": 0,
+     "d": 1,
+     "a": 19
+    }
+   }
+  },
+  "warnings": [],
+  "league": "LPL",
+  "tournament": "LPL 2026 Grand Finals",
+  "date": "2026-09-08",
+  "week": "ROUND3",
+  "seriesId": 82793,
+  "gameInSeries": 1,
+  "integrity": {
+   "picksMatchScoreboard": true,
+   "killTotalsMatch": true,
+   "teams": "LGD Gaming|Invictus Gaming"
+  }
+ },
+ {
+  "ok": true,
+  "gameId": 82794,
+  "duration": "25:30",
+  "durationMin": 25.5,
+  "patch": "16.17",
+  "blue": {
+   "team": "Invictus Gaming",
+   "teamFull": "Invictus Gaming",
+   "win": true,
+   "kills": 27,
+   "towers": 10,
+   "dragons": 3,
+   "barons": 1,
+   "gold": 59400,
+   "bans": [
+    "Akali",
+    "Locke",
+    "Vi",
+    "Maokai",
+    "Ahri"
+   ],
+   "picksDraftOrder": [
+    "Lulu",
+    "Yunara",
+    "Jarvan IV",
+    "Trundle",
+    "Aurora"
+   ],
+   "comp": {
+    "top": {
+     "champion": "Trundle",
+     "playerId": "1075",
+     "player": "TheShy",
+     "k": 4,
+     "d": 1,
+     "a": 12
+    },
+    "jungle": {
+     "champion": "Jarvan IV",
+     "playerId": "388",
+     "player": "Wei",
+     "k": 6,
+     "d": 3,
+     "a": 19
+    },
+    "mid": {
+     "champion": "Aurora",
+     "playerId": "109",
+     "player": "RooKie",
+     "k": 10,
+     "d": 2,
+     "a": 6
+    },
+    "adc": {
+     "champion": "Yunara",
+     "playerId": "5939",
+     "player": "JiaQi",
+     "k": 5,
+     "d": 5,
+     "a": 11
+    },
+    "support": {
+     "champion": "Lulu",
+     "playerId": "386",
+     "player": "meiko",
+     "k": 2,
+     "d": 0,
+     "a": 20
+    }
+   }
+  },
+  "red": {
+   "team": "LGD Gaming",
+   "teamFull": "LGD Gaming",
+   "win": false,
+   "kills": 11,
+   "towers": 0,
+   "dragons": 1,
+   "barons": 0,
+   "gold": 44800,
+   "bans": [
+    "Cassiopeia",
+    "Nocturne",
+    "Orianna",
+    "Kled",
+    "Rumble"
+   ],
+   "picksDraftOrder": [
+    "Olaf",
+    "Lucian",
+    "Milio",
+    "Qiyana",
+    "Galio"
+   ],
+   "comp": {
+    "top": {
+     "champion": "Olaf",
+     "playerId": "4119",
+     "player": "Burdol",
+     "k": 1,
+     "d": 4,
+     "a": 3
+    },
+    "jungle": {
+     "champion": "Qiyana",
+     "playerId": "3350",
+     "player": "Heng",
+     "k": 2,
+     "d": 8,
+     "a": 4
+    },
+    "mid": {
+     "champion": "Galio",
+     "playerId": "4919",
+     "player": "Tangyuan",
+     "k": 3,
+     "d": 6,
+     "a": 3
+    },
+    "adc": {
+     "champion": "Lucian",
+     "playerId": "5368",
+     "player": "Shaoye",
+     "k": 5,
+     "d": 6,
+     "a": 5
+    },
+    "support": {
+     "champion": "Milio",
+     "playerId": "1169",
+     "player": "Crisp",
+     "k": 0,
+     "d": 3,
+     "a": 10
+    }
+   }
+  },
+  "warnings": [],
+  "league": "LPL",
+  "tournament": "LPL 2026 Grand Finals",
+  "date": "2026-09-08",
+  "week": "ROUND3",
+  "seriesId": 82793,
+  "gameInSeries": 2,
+  "integrity": {
+   "picksMatchScoreboard": true,
+   "killTotalsMatch": true,
+   "teams": "Invictus Gaming|LGD Gaming"
+  }
+ },
+ {
+  "ok": true,
+  "gameId": 82795,
+  "duration": "27:45",
+  "durationMin": 27.75,
+  "patch": "16.17",
+  "blue": {
+   "team": "Invictus Gaming",
+   "teamFull": "Invictus Gaming",
+   "win": true,
+   "kills": 16,
+   "towers": 9,
+   "dragons": 1,
+   "barons": 1,
+   "gold": 55700,
+   "bans": [
+    "Akali",
+    "Locke",
+    "Vi",
+    "Yone",
+    "Tristana"
+   ],
+   "picksDraftOrder": [
+    "Orianna",
+    "Aphelios",
+    "Thresh",
+    "Skarner",
+    "Rumble"
+   ],
+   "comp": {
+    "top": {
+     "champion": "Rumble",
+     "playerId": "1075",
+     "player": "TheShy",
+     "k": 3,
+     "d": 3,
+     "a": 8
+    },
+    "jungle": {
+     "champion": "Skarner",
+     "playerId": "388",
+     "player": "Wei",
+     "k": 0,
+     "d": 0,
+     "a": 12
+    },
+    "mid": {
+     "champion": "Orianna",
+     "playerId": "109",
+     "player": "RooKie",
+     "k": 3,
+     "d": 3,
+     "a": 9
+    },
+    "adc": {
+     "champion": "Aphelios",
+     "playerId": "5939",
+     "player": "JiaQi",
+     "k": 10,
+     "d": 3,
+     "a": 1
+    },
+    "support": {
+     "champion": "Thresh",
+     "playerId": "386",
+     "player": "meiko",
+     "k": 0,
+     "d": 1,
+     "a": 15
+    }
+   }
+  },
+  "red": {
+   "team": "LGD Gaming",
+   "teamFull": "LGD Gaming",
+   "win": false,
+   "kills": 10,
+   "towers": 0,
+   "dragons": 3,
+   "barons": 0,
+   "gold": 46500,
+   "bans": [
+    "Cassiopeia",
+    "Nocturne",
+    "Caitlyn",
+    "Wukong",
+    "Lee Sin"
+   ],
+   "picksDraftOrder": [
+    "Maokai",
+    "Kalista",
+    "Renata Glasc",
+    "Taliyah",
+    "Camille"
+   ],
+   "comp": {
+    "top": {
+     "champion": "Camille",
+     "playerId": "4119",
+     "player": "Burdol",
+     "k": 3,
+     "d": 4,
+     "a": 3
+    },
+    "jungle": {
+     "champion": "Maokai",
+     "playerId": "3350",
+     "player": "Heng",
+     "k": 1,
+     "d": 2,
+     "a": 4
+    },
+    "mid": {
+     "champion": "Taliyah",
+     "playerId": "4919",
+     "player": "Tangyuan",
+     "k": 3,
+     "d": 1,
+     "a": 6
+    },
+    "adc": {
+     "champion": "Kalista",
+     "playerId": "5368",
+     "player": "Shaoye",
+     "k": 2,
+     "d": 5,
+     "a": 2
+    },
+    "support": {
+     "champion": "Renata Glasc",
+     "playerId": "1169",
+     "player": "Crisp",
+     "k": 1,
+     "d": 4,
+     "a": 5
+    }
+   }
+  },
+  "warnings": [],
+  "league": "LPL",
+  "tournament": "LPL 2026 Grand Finals",
+  "date": "2026-09-08",
+  "week": "ROUND3",
+  "seriesId": 82793,
+  "gameInSeries": 3,
+  "integrity": {
+   "picksMatchScoreboard": true,
+   "killTotalsMatch": true,
+   "teams": "Invictus Gaming|LGD Gaming"
+  }
  }
 ]
