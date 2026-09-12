@@ -2146,5 +2146,17 @@
   "week": "ROUND3",
   "patch": "16.17",
   "date": "2026-09-08"
+ },
+ {
+  "league": "LEC",
+  "tournament": "LEC 2026 Summer Playoffs",
+  "seriesId": 82735,
+  "matchup": "GIANTX vs NAVI",
+  "teamRight": "GIANTX",
+  "teamLeft": "Natus Vincere",
+  "games": 5,
+  "week": "ROUND1",
+  "patch": "16.17",
+  "date": "2026-09-11"
  }
 ]

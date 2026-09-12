@@ -71875,5 +71875,760 @@
    "killTotalsMatch": true,
    "teams": "Invictus Gaming|LGD Gaming"
   }
+ },
+ {
+  "ok": true,
+  "gameId": 82735,
+  "duration": "28:48",
+  "durationMin": 28.8,
+  "patch": "16.17",
+  "blue": {
+   "team": "GIANTX",
+   "teamFull": "GIANTX",
+   "win": false,
+   "kills": 8,
+   "towers": 3,
+   "dragons": 0,
+   "barons": 0,
+   "gold": 50300,
+   "bans": [
+    "KSante",
+    "Seraphine",
+    "Nocturne",
+    "Ezreal",
+    "Yunara"
+   ],
+   "picksDraftOrder": [
+    "Vi",
+    "Ambessa",
+    "Anivia",
+    "Rakan",
+    "Corki"
+   ],
+   "comp": {
+    "top": {
+     "champion": "Ambessa",
+     "playerId": "2526",
+     "player": "Oscarinin",
+     "k": 5,
+     "d": 3,
+     "a": 1
+    },
+    "jungle": {
+     "champion": "Vi",
+     "playerId": "3996",
+     "player": "Isma",
+     "k": 1,
+     "d": 6,
+     "a": 6
+    },
+    "mid": {
+     "champion": "Anivia",
+     "playerId": "3266",
+     "player": "Jackies",
+     "k": 2,
+     "d": 4,
+     "a": 4
+    },
+    "adc": {
+     "champion": "Corki",
+     "playerId": "2206",
+     "player": "Flakked",
+     "k": 0,
+     "d": 2,
+     "a": 4
+    },
+    "support": {
+     "champion": "Rakan",
+     "playerId": "3425",
+     "player": "Jun",
+     "k": 0,
+     "d": 5,
+     "a": 5
+    }
+   }
+  },
+  "red": {
+   "team": "Natus Vincere",
+   "teamFull": "Natus Vincere",
+   "win": true,
+   "kills": 20,
+   "towers": 8,
+   "dragons": 4,
+   "barons": 1,
+   "gold": 61000,
+   "bans": [
+    "Cassiopeia",
+    "Orianna",
+    "Syndra",
+    "Kaisa",
+    "Caitlyn"
+   ],
+   "picksDraftOrder": [
+    "Rumble",
+    "Ryze",
+    "Jarvan IV",
+    "Xayah",
+    "Nautilus"
+   ],
+   "comp": {
+    "top": {
+     "champion": "Rumble",
+     "playerId": "3706",
+     "player": "Maynter",
+     "k": 4,
+     "d": 1,
+     "a": 10
+    },
+    "jungle": {
+     "champion": "Jarvan IV",
+     "playerId": "4439",
+     "player": "Rhilech",
+     "k": 2,
+     "d": 1,
+     "a": 18
+    },
+    "mid": {
+     "champion": "Ryze",
+     "playerId": "4561",
+     "player": "Poby",
+     "k": 6,
+     "d": 2,
+     "a": 12
+    },
+    "adc": {
+     "champion": "Xayah",
+     "playerId": "3047",
+     "player": "SamD",
+     "k": 7,
+     "d": 0,
+     "a": 7
+    },
+    "support": {
+     "champion": "Nautilus",
+     "playerId": "4455",
+     "player": "Parus",
+     "k": 1,
+     "d": 4,
+     "a": 17
+    }
+   }
+  },
+  "warnings": [],
+  "league": "LEC",
+  "tournament": "LEC 2026 Summer Playoffs",
+  "date": "2026-09-11",
+  "week": "ROUND1",
+  "seriesId": 82735,
+  "gameInSeries": 1,
+  "integrity": {
+   "picksMatchScoreboard": true,
+   "killTotalsMatch": true,
+   "teams": "GIANTX|Natus Vincere"
+  }
+ },
+ {
+  "ok": true,
+  "gameId": 82736,
+  "duration": "35:57",
+  "durationMin": 35.95,
+  "patch": "16.17",
+  "blue": {
+   "team": "GIANTX",
+   "teamFull": "GIANTX",
+   "win": true,
+   "kills": 15,
+   "towers": 9,
+   "dragons": 2,
+   "barons": 0,
+   "gold": 74500,
+   "bans": [
+    "KSante",
+    "Nocturne",
+    "Qiyana",
+    "Skarner",
+    "Shyvana"
+   ],
+   "picksDraftOrder": [
+    "Seraphine",
+    "Xin Zhao",
+    "Ashe",
+    "Trundle",
+    "Syndra"
+   ],
+   "comp": {
+    "top": {
+     "champion": "Trundle",
+     "playerId": "2526",
+     "player": "Oscarinin",
+     "k": 4,
+     "d": 2,
+     "a": 4
+    },
+    "jungle": {
+     "champion": "Xin Zhao",
+     "playerId": "3996",
+     "player": "Isma",
+     "k": 1,
+     "d": 4,
+     "a": 12
+    },
+    "mid": {
+     "champion": "Syndra",
+     "playerId": "3266",
+     "player": "Jackies",
+     "k": 5,
+     "d": 4,
+     "a": 3
+    },
+    "adc": {
+     "champion": "Ashe",
+     "playerId": "2206",
+     "player": "Flakked",
+     "k": 5,
+     "d": 3,
+     "a": 3
+    },
+    "support": {
+     "champion": "Seraphine",
+     "playerId": "3425",
+     "player": "Jun",
+     "k": 0,
+     "d": 2,
+     "a": 13
+    }
+   }
+  },
+  "red": {
+   "team": "Natus Vincere",
+   "teamFull": "Natus Vincere",
+   "win": false,
+   "kills": 15,
+   "towers": 5,
+   "dragons": 4,
+   "barons": 2,
+   "gold": 69700,
+   "bans": [
+    "Cassiopeia",
+    "Orianna",
+    "Bard",
+    "Camille",
+    "Vayne"
+   ],
+   "picksDraftOrder": [
+    "Lucian",
+    "Milio",
+    "Olaf",
+    "Wukong",
+    "Akali"
+   ],
+   "comp": {
+    "top": {
+     "champion": "Olaf",
+     "playerId": "3706",
+     "player": "Maynter",
+     "k": 3,
+     "d": 1,
+     "a": 7
+    },
+    "jungle": {
+     "champion": "Wukong",
+     "playerId": "4439",
+     "player": "Rhilech",
+     "k": 6,
+     "d": 4,
+     "a": 6
+    },
+    "mid": {
+     "champion": "Akali",
+     "playerId": "4561",
+     "player": "Poby",
+     "k": 2,
+     "d": 3,
+     "a": 5
+    },
+    "adc": {
+     "champion": "Lucian",
+     "playerId": "3047",
+     "player": "SamD",
+     "k": 4,
+     "d": 4,
+     "a": 5
+    },
+    "support": {
+     "champion": "Milio",
+     "playerId": "4455",
+     "player": "Parus",
+     "k": 0,
+     "d": 3,
+     "a": 13
+    }
+   }
+  },
+  "warnings": [],
+  "league": "LEC",
+  "tournament": "LEC 2026 Summer Playoffs",
+  "date": "2026-09-11",
+  "week": "ROUND1",
+  "seriesId": 82735,
+  "gameInSeries": 2,
+  "integrity": {
+   "picksMatchScoreboard": true,
+   "killTotalsMatch": true,
+   "teams": "GIANTX|Natus Vincere"
+  }
+ },
+ {
+  "ok": true,
+  "gameId": 82737,
+  "duration": "36:18",
+  "durationMin": 36.3,
+  "patch": "16.17",
+  "blue": {
+   "team": "Natus Vincere",
+   "teamFull": "Natus Vincere",
+   "win": true,
+   "kills": 17,
+   "towers": 11,
+   "dragons": 1,
+   "barons": 2,
+   "gold": 76600,
+   "bans": [
+    "Nidalee",
+    "Jayce",
+    "Skarner",
+    "LeBlanc",
+    "Gnar"
+   ],
+   "picksDraftOrder": [
+    "Orianna",
+    "Ezreal",
+    "Karma",
+    "Shyvana",
+    "Renekton"
+   ],
+   "comp": {
+    "top": {
+     "champion": "Renekton",
+     "playerId": "3706",
+     "player": "Maynter",
+     "k": 1,
+     "d": 2,
+     "a": 9
+    },
+    "jungle": {
+     "champion": "Shyvana",
+     "playerId": "4439",
+     "player": "Rhilech",
+     "k": 9,
+     "d": 5,
+     "a": 8
+    },
+    "mid": {
+     "champion": "Orianna",
+     "playerId": "4561",
+     "player": "Poby",
+     "k": 4,
+     "d": 3,
+     "a": 10
+    },
+    "adc": {
+     "champion": "Ezreal",
+     "playerId": "3047",
+     "player": "SamD",
+     "k": 3,
+     "d": 2,
+     "a": 6
+    },
+    "support": {
+     "champion": "Karma",
+     "playerId": "4455",
+     "player": "Parus",
+     "k": 0,
+     "d": 4,
+     "a": 11
+    }
+   }
+  },
+  "red": {
+   "team": "GIANTX",
+   "teamFull": "GIANTX",
+   "win": false,
+   "kills": 16,
+   "towers": 4,
+   "dragons": 2,
+   "barons": 0,
+   "gold": 70800,
+   "bans": [
+    "Cassiopeia",
+    "Qiyana",
+    "Viktor",
+    "KSante",
+    "Zaahen"
+   ],
+   "picksDraftOrder": [
+    "Nocturne",
+    "Bard",
+    "Jhin",
+    "Locke",
+    "Kennen"
+   ],
+   "comp": {
+    "top": {
+     "champion": "Kennen",
+     "playerId": "2526",
+     "player": "Oscarinin",
+     "k": 1,
+     "d": 5,
+     "a": 7
+    },
+    "jungle": {
+     "champion": "Nocturne",
+     "playerId": "3996",
+     "player": "Isma",
+     "k": 2,
+     "d": 6,
+     "a": 11
+    },
+    "mid": {
+     "champion": "Locke",
+     "playerId": "3266",
+     "player": "Jackies",
+     "k": 10,
+     "d": 3,
+     "a": 4
+    },
+    "adc": {
+     "champion": "Jhin",
+     "playerId": "2206",
+     "player": "Flakked",
+     "k": 3,
+     "d": 1,
+     "a": 8
+    },
+    "support": {
+     "champion": "Bard",
+     "playerId": "3425",
+     "player": "Jun",
+     "k": 0,
+     "d": 2,
+     "a": 12
+    }
+   }
+  },
+  "warnings": [],
+  "league": "LEC",
+  "tournament": "LEC 2026 Summer Playoffs",
+  "date": "2026-09-11",
+  "week": "ROUND1",
+  "seriesId": 82735,
+  "gameInSeries": 3,
+  "integrity": {
+   "picksMatchScoreboard": true,
+   "killTotalsMatch": true,
+   "teams": "Natus Vincere|GIANTX"
+  }
+ },
+ {
+  "ok": true,
+  "gameId": 82738,
+  "duration": "36:30",
+  "durationMin": 36.5,
+  "patch": "16.17",
+  "blue": {
+   "team": "GIANTX",
+   "teamFull": "GIANTX",
+   "win": true,
+   "kills": 15,
+   "towers": 8,
+   "dragons": 3,
+   "barons": 1,
+   "gold": 74600,
+   "bans": [
+    "KSante",
+    "Qiyana",
+    "Viktor",
+    "Zaahen",
+    "Aatrox"
+   ],
+   "picksDraftOrder": [
+    "Skarner",
+    "Sivir",
+    "Alistar",
+    "Taliyah",
+    "Yorick"
+   ],
+   "comp": {
+    "top": {
+     "champion": "Yorick",
+     "playerId": "2526",
+     "player": "Oscarinin",
+     "k": 3,
+     "d": 3,
+     "a": 6
+    },
+    "jungle": {
+     "champion": "Skarner",
+     "playerId": "3996",
+     "player": "Isma",
+     "k": 1,
+     "d": 2,
+     "a": 7
+    },
+    "mid": {
+     "champion": "Taliyah",
+     "playerId": "3266",
+     "player": "Jackies",
+     "k": 1,
+     "d": 3,
+     "a": 9
+    },
+    "adc": {
+     "champion": "Sivir",
+     "playerId": "2206",
+     "player": "Flakked",
+     "k": 9,
+     "d": 3,
+     "a": 4
+    },
+    "support": {
+     "champion": "Alistar",
+     "playerId": "3425",
+     "player": "Jun",
+     "k": 1,
+     "d": 2,
+     "a": 11
+    }
+   }
+  },
+  "red": {
+   "team": "Natus Vincere",
+   "teamFull": "Natus Vincere",
+   "win": false,
+   "kills": 13,
+   "towers": 4,
+   "dragons": 2,
+   "barons": 1,
+   "gold": 71600,
+   "bans": [
+    "Cassiopeia",
+    "Jayce",
+    "Lulu",
+    "Camille",
+    "Azir"
+   ],
+   "picksDraftOrder": [
+    "Annie",
+    "Varus",
+    "Rell",
+    "Naafiri",
+    "Gwen"
+   ],
+   "comp": {
+    "top": {
+     "champion": "Gwen",
+     "playerId": "3706",
+     "player": "Maynter",
+     "k": 4,
+     "d": 3,
+     "a": 2
+    },
+    "jungle": {
+     "champion": "Naafiri",
+     "playerId": "4439",
+     "player": "Rhilech",
+     "k": 6,
+     "d": 3,
+     "a": 3
+    },
+    "mid": {
+     "champion": "Annie",
+     "playerId": "4561",
+     "player": "Poby",
+     "k": 1,
+     "d": 4,
+     "a": 7
+    },
+    "adc": {
+     "champion": "Varus",
+     "playerId": "3047",
+     "player": "SamD",
+     "k": 2,
+     "d": 3,
+     "a": 6
+    },
+    "support": {
+     "champion": "Rell",
+     "playerId": "4455",
+     "player": "Parus",
+     "k": 0,
+     "d": 2,
+     "a": 7
+    }
+   }
+  },
+  "warnings": [],
+  "league": "LEC",
+  "tournament": "LEC 2026 Summer Playoffs",
+  "date": "2026-09-11",
+  "week": "ROUND1",
+  "seriesId": 82735,
+  "gameInSeries": 4,
+  "integrity": {
+   "picksMatchScoreboard": true,
+   "killTotalsMatch": true,
+   "teams": "GIANTX|Natus Vincere"
+  }
+ },
+ {
+  "ok": true,
+  "gameId": 82739,
+  "duration": "37:30",
+  "durationMin": 37.5,
+  "patch": "16.17",
+  "blue": {
+   "team": "Natus Vincere",
+   "teamFull": "Natus Vincere",
+   "win": true,
+   "kills": 17,
+   "towers": 10,
+   "dragons": 3,
+   "barons": 2,
+   "gold": 75800,
+   "bans": [
+    "Nidalee",
+    "Jayce",
+    "Yone",
+    "Camille",
+    "Yunara"
+   ],
+   "picksDraftOrder": [
+    "Viktor",
+    "Aatrox",
+    "Leona",
+    "Ziggs",
+    "Jax"
+   ],
+   "comp": {
+    "top": {
+     "champion": "Jax",
+     "playerId": "3706",
+     "player": "Maynter",
+     "k": 2,
+     "d": 0,
+     "a": 4
+    },
+    "jungle": {
+     "champion": "Aatrox",
+     "playerId": "4439",
+     "player": "Rhilech",
+     "k": 7,
+     "d": 2,
+     "a": 6
+    },
+    "mid": {
+     "champion": "Viktor",
+     "playerId": "4561",
+     "player": "Poby",
+     "k": 3,
+     "d": 1,
+     "a": 8
+    },
+    "adc": {
+     "champion": "Ziggs",
+     "playerId": "3047",
+     "player": "SamD",
+     "k": 4,
+     "d": 1,
+     "a": 7
+    },
+    "support": {
+     "champion": "Leona",
+     "playerId": "4455",
+     "player": "Parus",
+     "k": 1,
+     "d": 2,
+     "a": 12
+    }
+   }
+  },
+  "red": {
+   "team": "GIANTX",
+   "teamFull": "GIANTX",
+   "win": false,
+   "kills": 6,
+   "towers": 3,
+   "dragons": 3,
+   "barons": 0,
+   "gold": 70000,
+   "bans": [
+    "Lulu",
+    "Qiyana",
+    "Cassiopeia",
+    "KSante",
+    "Zaahen"
+   ],
+   "picksDraftOrder": [
+    "Azir",
+    "Sejuani",
+    "Braum",
+    "Caitlyn",
+    "Gangplank"
+   ],
+   "comp": {
+    "top": {
+     "champion": "Gangplank",
+     "playerId": "2526",
+     "player": "Oscarinin",
+     "k": 2,
+     "d": 2,
+     "a": 1
+    },
+    "jungle": {
+     "champion": "Sejuani",
+     "playerId": "3996",
+     "player": "Isma",
+     "k": 1,
+     "d": 4,
+     "a": 3
+    },
+    "mid": {
+     "champion": "Azir",
+     "playerId": "3266",
+     "player": "Jackies",
+     "k": 2,
+     "d": 3,
+     "a": 2
+    },
+    "adc": {
+     "champion": "Caitlyn",
+     "playerId": "2206",
+     "player": "Flakked",
+     "k": 1,
+     "d": 4,
+     "a": 4
+    },
+    "support": {
+     "champion": "Braum",
+     "playerId": "3425",
+     "player": "Jun",
+     "k": 0,
+     "d": 4,
+     "a": 5
+    }
+   }
+  },
+  "warnings": [],
+  "league": "LEC",
+  "tournament": "LEC 2026 Summer Playoffs",
+  "date": "2026-09-11",
+  "week": "ROUND1",
+  "seriesId": 82735,
+  "gameInSeries": 5,
+  "integrity": {
+   "picksMatchScoreboard": true,
+   "killTotalsMatch": true,
+   "teams": "Natus Vincere|GIANTX"
+  }
  }
 ]
